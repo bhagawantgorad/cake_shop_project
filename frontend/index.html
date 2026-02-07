@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cake Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🍰 Bhagawant Cake Shop</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Delicious Cakes for Every Occasion</h2>
+    </section>
+
+    <section class="featured">
+        <div class="card">
+            <img src="img/cake1.png" alt="Chocolate Cake">
+            <h3>Chocolate Cake</h3>
+            <p>Rich and creamy chocolate delight.</p>
+        </div>
+        <div class="card">
+            <img src="img/cake2.jpg" alt="Strawberry Cake">
+            <h3>Strawberry Cake</h3>
+            <p>Fresh strawberries with fluffy cream.</p>
+        </div>
+        <div class="card">
+            <img src="img/cake3.jpg" alt="Vanilla Cake">
+            <h3>Vanilla Cake</h3>
+            <p>Classic vanilla flavor loved by all.</p>
+        </div>
+    </section>
+
+    <!-- IMPORTANT: REMOVE action -->
+    <section class="order-form">
+        <h2>Place Your Order</h2>
+        <form id="cakeForm">
+
+            <div class="form-group">
+                <label for="name">Customer Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Order Date:</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="flavor">Select Flavor:</label>
+                <select name="flavor" id="flavor" required>
+                    <option value="">-- Choose a Flavor --</option>
+                    <option value="Chocolate">Chocolate - ₹500</option>
+                    <option value="Vanilla">Vanilla - ₹400</option>
+                    <option value="Strawberry">Strawberry - ₹450</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="size">Select Size:</label>
+                <select name="size" id="size" required>
+                    <option value="">-- Choose Size --</option>
+                    <option value="Small">Small (x1)</option>
+                    <option value="Medium">Medium (x1.5)</option>
+                    <option value="Large">Large (x2)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Extras:</label>
+                <label><input type="checkbox" class="extra" value="Nuts"> Nuts (+₹50)</label>
+                <label><input type="checkbox" class="extra" value="Chocolate Chips"> Chocolate Chips (+₹70)</label>
+                <label><input type="checkbox" class="extra" value="Extra Cream"> Extra Cream (+₹60)</label>
+            </div>
+
+            <input type="hidden" id="hiddenTotal" name="total">
+
+            <div id="total">Total: ₹0</div>
+
+            <div class="form-group" style="text-align:center;">
+                <button type="submit">Place Order</button>
+            </div>
+        </form>
+
+        <div id="success">✅ Order placed successfully! Thank you 🎉</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bhagawant Cake Shop | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
